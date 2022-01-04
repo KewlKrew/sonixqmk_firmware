@@ -59,13 +59,8 @@
 /* default ripple effect */
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CUSTOM_RIPPLE
 #else
-/* default to reactive effect */
 #define RGB_MATRIX_KEYPRESSES
-#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_REACTIVE
-#define RGB_MATRIX_STARTUP_SPD 50   // slower reactive fade (0 to 255)
-#define RGB_MATRIX_STARTUP_HUE 8    // orange hue
-#define RGB_MATRIX_STARTUP_SAT 255  // vivid saturation
-#define RGB_MATRIX_STARTUP_VAL 160  // reduced brightness
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #endif
 #endif
 
