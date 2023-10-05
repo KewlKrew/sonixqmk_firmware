@@ -43,12 +43,12 @@
 
 #define DIODE_DIRECTION ROW2COL
 
-/* 
+/*
  * Feature
  */
 #define USB_POLLING_INTERVAL_MS 1           /* 1000 Hz */
 #define FORCE_NKRO                          /* default NRKO enabled */
-#define DEBOUNCE 1                          /* Debounce time in ms */
+#define DEBOUNCE 5                          /* Debounce time in ms */
 #define RGB_DISABLE_WHEN_USB_SUSPENDED true /* rgb off when power off / suspend */
 // #define VIA_OPENRGB_HYBRID
 // #define USE_FRAMEBUFFER
@@ -93,7 +93,7 @@
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 
-/* 
+/*
  * Optimization
  */
 #define NO_ACTION_MACRO
