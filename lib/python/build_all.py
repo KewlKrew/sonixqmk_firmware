@@ -42,20 +42,8 @@ if args.blacklist:
 
 def main():
     for line in BOARDS:
-        # We need to manipulate some non-standard directories
         if should_include(line):
-            if re.match("^(gmmk)", line.strip()):
-                KEYBOARDS.append(line.strip() + "/rev2")
-                KEYBOARDS.append(line.strip() + "/rev3")
-            if re.match("^(keychron/k)", line.strip()):
-                KEYBOARDS.append(line.strip())
-                # keychron K series white don't have yet via/optical support
-                if re.match("(?!.*white)", line.strip()):
-                    KEYBOARDS.append(line.strip() + "/via")
-                    KEYBOARDS.append(line.strip() + "/optical")
-                    KEYBOARDS.append(line.strip() + "/optical_via")
-            else:
-                KEYBOARDS.append(line.strip())
+            KEYBOARDS.append(line.strip())
     if args.debug:
         print('Filtered and processed boards: ', KEYBOARDS)
 
